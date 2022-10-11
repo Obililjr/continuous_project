@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masajja Urban Farm</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="container">
+        <form class="form" id="signup" name="registration" onsubmit="return false">
+          <h1>Sign Up</h1>
+          <div class="form-field">
+            <label for="username">Username:</label>
+            <input type="text" name="username" autocomplete="off" id="username" />
+            <small></small>
+          </div>
+    
+          <div class="form-field">
+            <label for="date">Email:</label>
+            <input type="text" name="date" autocomplete="on" id="date" onblur="checkEmail()" />
+            <small></small>
+          </div>
+          
+          <div class="form-field">
+            <label for="phone-number">Phone Number:</label>
+            <input type="text" name="phoneNumber" placeholder="0751883656" autocomplete="off" id="phone-number" onblur="checkPhone()" />
+            <small></small>
+          </div>
+
+          <div class="form-field">
+            <label for="date">Date:</label>
+            <input type="date" name="date" autocomplete="off" id="date" onblur="checkEmail()" />
+            <small></small>
+          </div>
+
+          <div class="form-field">
+            <label for="password">Password:</label>
+            <input type="text" name="password" autocomplete="off" id="password" onblur="checkPassword()" />
+            <small></small>
+          </div>
+
+          <div class="form-field">
+            <label for="gender">Gender:</label>
+            <div class="radio">
+              <input type="radio" name="gender" autocomplete="off" id="gender1" value="male" checked />
+              <span>Male</span>
+              <input type="radio" name="gender" autocomplete="off" id="gender2" value="female" />
+              <span>Female</span>
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <label for="Region">Home Region:</label>
+            <div class="radio">
+              <input type="checkbox" name="East" autocomplete="off" id="languages1" value="luganda" />
+              <span>East</span>
+              <input type="checkbox" name="West" autocomplete="off" id="languages2" value="kiswahili" />
+              <span>West</span>
+              <input type="checkbox" name="South" autocomplete="off" id="languages2" value="itesot" />
+              <span>South</span>
+              <input type="checkbox" name="North" autocomplete="off" id="languages2" value="itesot" />
+              <span>North</span>
+            </div>
+          </div>
+    
+          <div class="form-field">
+            <input type="submit" class="btn" id="submit" value="Sign Up"
+              onclick="checkUserName(), checkFirstName(), checkTelephone(), checkPassword()" />
+            <small></small>
+          </div>
+
+          <div class="form-field">
+            <input type="submit" class="btn" id="submit" value="Cancel"
+              onclick="checkUserName(), checkFirstName(), checkTelephone(), checkPassword()" />
+            <small></small>
+          </div>
+        </form>
+      </div>
+</body>
+<script src="validation.js"></script>
+</html>
